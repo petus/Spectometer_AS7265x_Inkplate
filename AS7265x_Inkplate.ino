@@ -397,7 +397,7 @@ void setup()
 
     sensor.setMeasurementMode(2); // MEASUREMENT_MODE_6CHAN_ONESHOT
     sensor.setGain(gainLevels[gainIndex]);
-    sensor.setIntegrationCycles(100);
+    sensor.setIntegrationCycles(20);
 
     Serial.println("System ready");
 }
