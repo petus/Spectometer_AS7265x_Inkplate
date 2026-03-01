@@ -422,7 +422,7 @@ void loop()
         if (red == 0) red = 1;
 
         // Blue ration
-        float visible = sumRange(0, 13); // U500
+        float visible = sumRange(0, 13); //    U500 methodology 410 - 760 nm
         float blueRatio = blue / visible;
 
         // Cold index
