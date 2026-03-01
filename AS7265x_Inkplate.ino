@@ -356,6 +356,23 @@ void readSensor()
     sensor.takeMeasurements();
     delay(1000);
 
+    /*
+    Wavelength to Color Reference (Visible Spectrum)
+    
+    410 nm  - Deep violet (near UV)
+    435 nm  - Violet-blue
+    460 nm  - Blue
+    485 nm  - Cyan (blue-green)
+    510 nm  - Green (cool green)
+    535 nm  - Green (peak eye sensitivity region)
+    560 nm  - Yellow-green
+    585 nm  - Yellow / yellow-orange
+    610 nm  - Orange
+    645 nm  - Red
+    680 nm  - Deep red
+    705 nm  - Very deep red (near infrared)
+    */
+    
     // AS72653
     spectrum[0] = sensor.getCalibratedA(); // 410
     spectrum[1] = sensor.getCalibratedB(); // 435
