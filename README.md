@@ -4,6 +4,8 @@ Projekt vznikl ve spolupráci **chiptron.cz** a **botland.pl**.
 
 Jednoduchý spektrální analyzátor osvětlení postavený na senzoru **AS7265x** a e-paper displeji **Inkplate 5 V2**. Zařízení měří světlo v rozsahu **410–940 nm**, analyzuje jeho spektrální složení a zobrazuje výsledky přehledně na displeji i v Serial monitoru.
 
+Celý projekt najdete na https://chiptron.cz/projekt-vicekanaloveho-spektralniho-analyzatoru-verejneho-osvetleni/
+
 ---
 
 ## Hlavní vlastnosti
