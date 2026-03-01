@@ -416,13 +416,13 @@ void loop()
         float blue  = sumRange(0, 3);   // 410 - 485 nm
         float green = sumRange(4, 7);   // 510 - 585 nm
         float red   = sumRange(8, 11);  // 610 - 705 nm
-        float total = sumRange(0, 17);  // cele spektrum 410–940 nm
+        float total = sumRange(0, 17);  // whole range of spectrum 410–940 nm
 
         if (total == 0) total = 1;
         if (red == 0) red = 1;
 
         // Blue ration
-        float visible = sumRange(0, 11);
+        float visible = sumRange(0, 13); // U500
         float blueRatio = blue / visible;
 
         // Cold index
