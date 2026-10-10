@@ -96,16 +96,6 @@ Výrobní tolerance středů kanálů (±10 nm podle datasheetu) přidává dal�
 
 **Korekce kanálů.** Tři čipy AS7265x mají každý vlastní tovární kalibraci a u testovaného kusu měřil čip AS72651 (610, 680, 730, 760, 810, 860 nm) asi 2,7× víc než ostatní. Projevilo se to výraznou špičkou na 610 nm, CCT kolem 2 800 K a Duv −0,024 u studené bílé LED. Po korekci vychází asi 5 000 K a Duv −0,002. Korekce je v poli `CHANNEL_CORRECTION` na začátku sketche a platí jen pro tento kus. U jiného senzoru nastavte všechny hodnoty na 1.0, zkontrolujte, jestli spektrum nemá skoky mezi kanály různých čipů, a případně koeficient přepočítejte podle návodu v části [Kalibrace doma](#kalibrace-doma).
 
-### Test výpočtů na PC
-
-```
-pip install colour-science numpy
-python3 tools/compute_weights.py --vectors test/vectors.csv
-g++ -std=c++17 -O2 -IAS7265x_Inkplate test/test_spectral_math.cpp -o test_sm && ./test_sm test/vectors.csv
-```
-
----
-
 ## Kalibrace doma
 
 Kalibrace má dva nezávislé kroky. Korekce čipů ovlivňuje tvar spektra a s ním CCT, Duv, Blue % a Cold index. `LUX_CAL` mění jen odhad osvětlenosti v luxech. Bez luxmetru stačí udělat první krok.
